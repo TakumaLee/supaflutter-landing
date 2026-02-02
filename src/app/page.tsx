@@ -160,21 +160,25 @@ interface PricingFeature {
   name: string;
   starter: boolean;
   pro: boolean;
+  team: boolean;
 }
 
 const pricingFeatures: PricingFeature[] = [
-  { name: "Auth (Email, Google, Apple)", starter: true, pro: true },
-  { name: "GoRouter Navigation", starter: true, pro: true },
-  { name: "Theme System (Light/Dark)", starter: true, pro: true },
-  { name: "Multi-language (EN/JA/ZH_TW)", starter: true, pro: true },
-  { name: "CI/CD Templates", starter: true, pro: true },
-  { name: "Onboarding Flow", starter: true, pro: true },
-  { name: "MVVM + Clean Architecture", starter: true, pro: true },
-  { name: "RevenueCat + Stripe Payments", starter: false, pro: true },
-  { name: "Push Notifications (FCM)", starter: false, pro: true },
-  { name: "Analytics Integration", starter: false, pro: true },
-  { name: "Deep Links Setup", starter: false, pro: true },
-  { name: "Offline Detection", starter: false, pro: true },
+  { name: "Auth (Email, Google, Apple)", starter: true, pro: true, team: true },
+  { name: "GoRouter Navigation", starter: true, pro: true, team: true },
+  { name: "Theme System (Light/Dark)", starter: true, pro: true, team: true },
+  { name: "Multi-language (EN/JA/ZH_TW)", starter: true, pro: true, team: true },
+  { name: "CI/CD Templates", starter: true, pro: true, team: true },
+  { name: "Onboarding Flow", starter: true, pro: true, team: true },
+  { name: "MVVM + Clean Architecture", starter: true, pro: true, team: true },
+  { name: "RevenueCat + Stripe Payments", starter: false, pro: true, team: true },
+  { name: "Push Notifications (FCM)", starter: false, pro: true, team: true },
+  { name: "Analytics Integration", starter: false, pro: true, team: true },
+  { name: "Deep Links Setup", starter: false, pro: true, team: true },
+  { name: "Offline Detection", starter: false, pro: true, team: true },
+  { name: "Team License (up to 5 devs)", starter: false, pro: false, team: true },
+  { name: "Priority Support", starter: false, pro: false, team: true },
+  { name: "Custom Branding Removal", starter: false, pro: false, team: true },
 ];
 
 const faqs = [
@@ -256,7 +260,7 @@ function HeroSection() {
             href="#pricing"
             className="btn-primary inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-white"
           >
-            Get Started — $49
+            Get Started — $59
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
@@ -401,34 +405,34 @@ function TechStackSection() {
 function PricingSection() {
   return (
     <section id="pricing" className="px-4 py-24 sm:px-6">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <span className="badge mb-4">Pricing</span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
             One-time purchase. <span className="gradient-text">Lifetime updates.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted">
-            Early bird pricing for the first 100 customers. Pay once, own it forever. 30-day money-back guarantee.
+            Pay once, own it forever. 30-day money-back guarantee, no questions asked.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-3">
           {/* Starter */}
-          <div className="rounded-2xl border border-border p-8">
+          <div className="rounded-2xl border border-border p-8 flex flex-col">
             <h3 className="text-lg font-semibold">Starter</h3>
             <p className="mt-1 text-sm text-muted">Everything to get started</p>
             <div className="mt-6 flex items-baseline gap-2">
-              <span className="text-4xl font-bold">$49</span>
-              <span className="text-sm text-muted line-through">$79</span>
-              <span className="badge ml-2 text-xs">Early Bird</span>
+              <span className="text-4xl font-bold">$29</span>
             </div>
             <a
-              href="#pricing"
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 block w-full rounded-xl border border-border py-3 text-center font-semibold transition-colors hover:border-accent hover:bg-card"
             >
               Buy Starter
             </a>
-            <div className="mt-8 space-y-3">
+            <div className="mt-8 space-y-3 flex-1">
               {pricingFeatures.map((f) => (
                 <div key={`starter-${f.name}`} className="flex items-center gap-3 text-sm">
                   {f.starter ? <IconCheck /> : <IconX />}
@@ -438,31 +442,58 @@ function PricingSection() {
             </div>
           </div>
 
-          {/* Pro */}
-          <div className="pricing-popular rounded-2xl border border-accent/50 p-8">
+          {/* Pro — Recommended */}
+          <div className="pricing-popular rounded-2xl border border-accent/50 p-8 flex flex-col relative">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+              <span className="badge text-xs font-semibold">⭐ Recommended</span>
+            </div>
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-semibold">Pro</h3>
                 <p className="mt-1 text-sm text-muted">The complete toolkit</p>
               </div>
-              <span className="badge">Most Popular</span>
             </div>
             <div className="mt-6 flex items-baseline gap-2">
-              <span className="text-4xl font-bold gradient-text">$99</span>
-              <span className="text-sm text-muted line-through">$149</span>
-              <span className="badge ml-2 text-xs">Early Bird</span>
+              <span className="text-4xl font-bold gradient-text">$59</span>
             </div>
             <a
-              href="#pricing"
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary mt-6 block w-full rounded-xl py-3 text-center font-semibold text-white"
             >
               Buy Pro
             </a>
-            <div className="mt-8 space-y-3">
+            <div className="mt-8 space-y-3 flex-1">
               {pricingFeatures.map((f) => (
                 <div key={`pro-${f.name}`} className="flex items-center gap-3 text-sm">
                   {f.pro ? <IconCheck /> : <IconX />}
                   <span className={f.pro ? "text-foreground" : "text-zinc-600"}>{f.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Team */}
+          <div className="rounded-2xl border border-border p-8 flex flex-col">
+            <h3 className="text-lg font-semibold">Team</h3>
+            <p className="mt-1 text-sm text-muted">For teams & agencies</p>
+            <div className="mt-6 flex items-baseline gap-2">
+              <span className="text-4xl font-bold">$129</span>
+            </div>
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 block w-full rounded-xl border border-border py-3 text-center font-semibold transition-colors hover:border-accent hover:bg-card"
+            >
+              Buy Team
+            </a>
+            <div className="mt-8 space-y-3 flex-1">
+              {pricingFeatures.map((f) => (
+                <div key={`team-${f.name}`} className="flex items-center gap-3 text-sm">
+                  {f.team ? <IconCheck /> : <IconX />}
+                  <span className={f.team ? "text-foreground" : "text-zinc-600"}>{f.name}</span>
                 </div>
               ))}
             </div>

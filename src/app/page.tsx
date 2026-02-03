@@ -307,7 +307,7 @@ function FeaturesGrid() {
             Stop wasting weeks on boilerplate. SupaFlutter Kit gives you a production-grade foundation so you can focus on what makes your app unique.
           </p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (
             <div
               key={f.title}
@@ -416,9 +416,9 @@ function PricingSection() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-1 max-w-5xl mx-auto">
           {/* Starter */}
-          <div className="rounded-2xl border border-border p-8 flex flex-col">
+          <div className="rounded-2xl border border-border p-6 sm:p-8 flex flex-col">
             <h3 className="text-lg font-semibold">Starter</h3>
             <p className="mt-1 text-sm text-muted">Everything to get started</p>
             <div className="mt-6 flex items-baseline gap-2">
@@ -443,7 +443,7 @@ function PricingSection() {
           </div>
 
           {/* Pro — Recommended */}
-          <div className="pricing-popular rounded-2xl border border-accent/50 p-8 flex flex-col relative">
+          <div className="pricing-popular rounded-2xl border border-accent/50 p-6 sm:p-8 flex flex-col relative">
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
               <span className="badge text-xs font-semibold">⭐ Recommended</span>
             </div>
@@ -475,7 +475,7 @@ function PricingSection() {
           </div>
 
           {/* Team */}
-          <div className="rounded-2xl border border-border p-8 flex flex-col">
+          <div className="rounded-2xl border border-border p-6 sm:p-8 flex flex-col">
             <h3 className="text-lg font-semibold">Team</h3>
             <p className="mt-1 text-sm text-muted">For teams & agencies</p>
             <div className="mt-6 flex items-baseline gap-2">

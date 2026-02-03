@@ -213,7 +213,7 @@ const faqs = [
 function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-10">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
         <a href="#" className="flex items-center gap-2 text-lg font-bold">
           <span className="gradient-text">SupaFlutter Kit</span>
           <span className="text-sm">🐈‍⬛</span>
@@ -240,7 +240,7 @@ function Navbar() {
 
 function HeroSection() {
   return (
-    <section className="hero-gradient relative flex min-h-screen flex-col items-center justify-center px-6 pt-16 text-center sm:px-8">
+    <section className="hero-gradient relative flex min-h-screen flex-col items-center justify-center px-5 pt-16 text-center sm:px-6">
       <div className="animate-fade-in mx-auto max-w-4xl">
         <div className="badge mb-6">
           <span className="mr-1.5">🐈‍⬛</span> Built by Ruri — AI Maid Developer
@@ -249,10 +249,10 @@ function HeroSection() {
           Ship Flutter Apps{" "}
           <span className="gradient-text">10x Faster</span>
         </h1>
-        <p className="mx-auto mb-6 max-w-2xl text-lg text-muted sm:text-xl">
+        <p className="mx-auto mb-4 max-w-2xl text-lg text-muted sm:text-xl">
           Your AI Maid already built the boring parts.
         </p>
-        <p className="mx-auto mb-12 max-w-xl text-sm text-muted/70 leading-relaxed">
+        <p className="mx-auto mb-10 max-w-xl text-sm text-muted/70 leading-relaxed">
           Production-ready Flutter + Supabase starter kit with Auth, Payments, Push Notifications, Clean Architecture, and 86 passing tests.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -296,27 +296,27 @@ function HeroSection() {
 
 function FeaturesGrid() {
   return (
-    <section id="features" className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
+    <section id="features" className="px-5 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-20 text-center">
-          <span className="badge mb-6">Features</span>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
+        <div className="mb-16 text-center">
+          <span className="badge mb-4">Features</span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Everything you need to <span className="gradient-text">launch</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted">
+          <p className="mx-auto mt-4 max-w-2xl text-muted">
             Stop wasting weeks on boilerplate. SupaFlutter Kit gives you a production-grade foundation so you can focus on what makes your app unique.
           </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {features.map((f) => (
             <div
               key={f.title}
-              className="card-glow rounded-2xl border border-border p-8 flex flex-col gap-5"
+              className="card-glow rounded-2xl border border-border p-6 flex flex-col gap-4"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
                 {f.icon}
               </div>
-              <h3 className="text-lg font-semibold">{f.title}</h3>
+              <h3 className="font-semibold">{f.title}</h3>
               <p className="text-sm leading-relaxed text-muted">{f.description}</p>
             </div>
           ))}
@@ -328,29 +328,29 @@ function FeaturesGrid() {
 
 function ArchitectureSection() {
   return (
-    <section id="architecture" className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
+    <section id="architecture" className="px-5 py-24 sm:px-6">
       <div className="mx-auto max-w-4xl">
-        <div className="mb-20 text-center">
-          <span className="badge mb-6">Architecture</span>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
+        <div className="mb-16 text-center">
+          <span className="badge mb-4">Architecture</span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Clean <span className="gradient-text">MVVM</span> Architecture
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted">
+          <p className="mx-auto mt-4 max-w-2xl text-muted">
             Built with separation of concerns in mind. Each layer has a clear responsibility, making your code testable, maintainable, and scalable.
           </p>
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-3">
           {archLayers.map((layer, i) => (
             <div
               key={layer.label}
-              className="group flex items-center gap-5 rounded-xl border border-border p-6 transition-all hover:border-accent/30 hover:bg-card"
+              className="group flex items-center gap-4 rounded-xl border border-border p-4 transition-all hover:border-accent/30 hover:bg-card"
               style={{ marginLeft: `${i * 24}px`, marginRight: `${(archLayers.length - 1 - i) * 24}px` }}
             >
-              <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${layer.color} text-sm font-bold text-accent`}>
+              <div className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br ${layer.color} text-sm font-bold text-accent`}>
                 {i + 1}
               </div>
-              <div className="space-y-1.5">
-                <p className="text-base font-semibold">{layer.label}</p>
+              <div className="space-y-1">
+                <p className="font-semibold">{layer.label}</p>
                 <p className="text-sm text-muted">{layer.desc}</p>
               </div>
               {i < archLayers.length - 1 && (
@@ -363,7 +363,7 @@ function ArchitectureSection() {
             </div>
           ))}
         </div>
-        <div className="mt-12 rounded-xl border border-border bg-card p-8 text-center">
+        <div className="mt-8 rounded-xl border border-border bg-card p-6 text-center">
           <p className="text-sm text-muted">
             <span className="font-mono text-accent">86 tests</span> passing — Clean architecture makes testing a breeze.
           </p>
@@ -375,19 +375,19 @@ function ArchitectureSection() {
 
 function TechStackSection() {
   return (
-    <section className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
+    <section className="px-5 py-24 sm:px-6">
       <div className="mx-auto max-w-4xl">
-        <div className="mb-16 text-center">
-          <span className="badge mb-6">Tech Stack</span>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
+        <div className="mb-12 text-center">
+          <span className="badge mb-4">Tech Stack</span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Powered by the <span className="gradient-text">best tools</span>
           </h2>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-5">
+        <div className="flex flex-wrap items-center justify-center gap-3">
           {techStack.map((tech) => (
             <div
               key={tech.name}
-              className="card-glow flex items-center gap-3 rounded-full border border-border px-7 py-3.5"
+              className="card-glow flex items-center gap-2.5 rounded-full border border-border px-5 py-2.5"
             >
               <div
                 className="h-3 w-3 rounded-full"
@@ -404,35 +404,35 @@ function TechStackSection() {
 
 function PricingSection() {
   return (
-    <section id="pricing" className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
+    <section id="pricing" className="px-5 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-20 text-center">
-          <span className="badge mb-6">Pricing</span>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
+        <div className="mb-16 text-center">
+          <span className="badge mb-4">Pricing</span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
             One-time purchase. <span className="gradient-text">Lifetime updates.</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-muted">
+          <p className="mx-auto mt-4 max-w-xl text-muted">
             Pay once, own it forever. 30-day money-back guarantee, no questions asked.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3 lg:gap-10 max-w-6xl mx-auto">
+        <div className="grid gap-6 lg:grid-cols-3 lg:gap-8 max-w-6xl mx-auto">
           {/* Starter */}
-          <div className="rounded-2xl border border-border p-8 sm:p-10 flex flex-col min-w-0">
-            <h3 className="text-xl font-semibold">Starter</h3>
-            <p className="mt-3 text-sm text-muted">Everything to get started</p>
-            <div className="mt-10 flex items-baseline gap-2">
-              <span className="text-5xl font-bold">$29</span>
+          <div className="rounded-2xl border border-border p-6 sm:p-8 flex flex-col min-w-0">
+            <h3 className="text-lg font-semibold">Starter</h3>
+            <p className="mt-2 text-sm text-muted">Everything to get started</p>
+            <div className="mt-6 flex items-baseline gap-2">
+              <span className="text-4xl font-bold">$29</span>
             </div>
             <a
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 block w-full rounded-xl border border-border py-3.5 text-center font-semibold transition-colors hover:border-accent hover:bg-card"
+              className="mt-6 block w-full rounded-xl border border-border py-3 text-center font-semibold transition-colors hover:border-accent hover:bg-card"
             >
               Buy Starter
             </a>
-            <div className="mt-12 space-y-4 flex-1">
+            <div className="mt-8 space-y-3 flex-1">
               {pricingFeatures.map((f) => (
                 <div key={`starter-${f.name}`} className="flex items-center gap-3 text-sm">
                   {f.starter ? <IconCheck /> : <IconX />}
@@ -443,28 +443,28 @@ function PricingSection() {
           </div>
 
           {/* Pro — Recommended */}
-          <div className="pricing-popular rounded-2xl border border-accent/50 p-8 sm:p-10 flex flex-col relative min-w-0">
+          <div className="pricing-popular rounded-2xl border border-accent/50 p-6 sm:p-8 flex flex-col relative min-w-0">
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
               <span className="badge text-xs font-semibold">⭐ Recommended</span>
             </div>
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-xl font-semibold">Pro</h3>
-                <p className="mt-3 text-sm text-muted">The complete toolkit</p>
+                <h3 className="text-lg font-semibold">Pro</h3>
+                <p className="mt-2 text-sm text-muted">The complete toolkit</p>
               </div>
             </div>
-            <div className="mt-10 flex items-baseline gap-2">
-              <span className="text-5xl font-bold gradient-text">$59</span>
+            <div className="mt-6 flex items-baseline gap-2">
+              <span className="text-4xl font-bold gradient-text">$59</span>
             </div>
             <a
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary mt-10 block w-full rounded-xl py-3.5 text-center font-semibold text-white"
+              className="btn-primary mt-6 block w-full rounded-xl py-3 text-center font-semibold text-white"
             >
               Buy Pro
             </a>
-            <div className="mt-12 space-y-4 flex-1">
+            <div className="mt-8 space-y-3 flex-1">
               {pricingFeatures.map((f) => (
                 <div key={`pro-${f.name}`} className="flex items-center gap-3 text-sm">
                   {f.pro ? <IconCheck /> : <IconX />}
@@ -475,21 +475,21 @@ function PricingSection() {
           </div>
 
           {/* Team */}
-          <div className="rounded-2xl border border-border p-8 sm:p-10 flex flex-col min-w-0">
-            <h3 className="text-xl font-semibold">Team</h3>
-            <p className="mt-3 text-sm text-muted">For teams & agencies</p>
-            <div className="mt-10 flex items-baseline gap-2">
-              <span className="text-5xl font-bold">$129</span>
+          <div className="rounded-2xl border border-border p-6 sm:p-8 flex flex-col min-w-0">
+            <h3 className="text-lg font-semibold">Team</h3>
+            <p className="mt-2 text-sm text-muted">For teams & agencies</p>
+            <div className="mt-6 flex items-baseline gap-2">
+              <span className="text-4xl font-bold">$129</span>
             </div>
             <a
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 block w-full rounded-xl border border-border py-3.5 text-center font-semibold transition-colors hover:border-accent hover:bg-card"
+              className="mt-6 block w-full rounded-xl border border-border py-3 text-center font-semibold transition-colors hover:border-accent hover:bg-card"
             >
               Buy Team
             </a>
-            <div className="mt-12 space-y-4 flex-1">
+            <div className="mt-8 space-y-3 flex-1">
               {pricingFeatures.map((f) => (
                 <div key={`team-${f.name}`} className="flex items-center gap-3 text-sm">
                   {f.team ? <IconCheck /> : <IconX />}
@@ -500,7 +500,7 @@ function PricingSection() {
           </div>
         </div>
 
-        <p className="mt-14 text-center text-sm text-muted/60">
+        <p className="mt-10 text-center text-sm text-muted/60">
           30-day money-back guarantee. No questions asked.
         </p>
       </div>
@@ -510,35 +510,35 @@ function PricingSection() {
 
 function SocialProofSection() {
   return (
-    <section className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
+    <section className="px-5 py-24 sm:px-6">
       <div className="mx-auto max-w-4xl text-center">
-        <div className="rounded-2xl border border-border bg-card/50 px-8 py-24 sm:px-10 backdrop-blur-sm">
-          <p className="mb-10 text-6xl">🐈‍⬛</p>
+        <div className="rounded-2xl border border-border bg-card/50 px-6 py-16 backdrop-blur-sm">
+          <p className="mb-8 text-5xl">🐈‍⬛</p>
           <h2 className="text-2xl font-bold sm:text-3xl">
             Built by <span className="gradient-text">AI</span>, trusted by developers.
           </h2>
-          <p className="mx-auto mt-8 max-w-lg text-lg text-muted">
+          <p className="mx-auto mt-6 max-w-lg text-muted">
             SupaFlutter Kit is maintained by Ruri (琉璃), an AI Maid Developer who obsesses over clean code, proper architecture, and developer experience.
           </p>
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-12 text-muted">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-muted">
             <div className="text-center">
-              <p className="text-3xl font-bold text-foreground">86</p>
-              <p className="mt-1 text-xs">Tests Passing</p>
+              <p className="text-2xl font-bold text-foreground">86</p>
+              <p className="text-xs">Tests Passing</p>
             </div>
-            <div className="h-10 w-px bg-border" />
+            <div className="h-8 w-px bg-border" />
             <div className="text-center">
-              <p className="text-3xl font-bold text-foreground">MVVM</p>
-              <p className="mt-1 text-xs">Clean Architecture</p>
+              <p className="text-2xl font-bold text-foreground">MVVM</p>
+              <p className="text-xs">Clean Architecture</p>
             </div>
-            <div className="h-10 w-px bg-border" />
+            <div className="h-8 w-px bg-border" />
             <div className="text-center">
-              <p className="text-3xl font-bold text-foreground">3</p>
-              <p className="mt-1 text-xs">Languages</p>
+              <p className="text-2xl font-bold text-foreground">3</p>
+              <p className="text-xs">Languages</p>
             </div>
-            <div className="h-10 w-px bg-border" />
+            <div className="h-8 w-px bg-border" />
             <div className="text-center">
-              <p className="text-3xl font-bold text-foreground">100%</p>
-              <p className="mt-1 text-xs">Open Source Friendly</p>
+              <p className="text-2xl font-bold text-foreground">100%</p>
+              <p className="text-xs">Open Source Friendly</p>
             </div>
           </div>
         </div>
@@ -549,27 +549,27 @@ function SocialProofSection() {
 
 function FAQSection() {
   return (
-    <section id="faq" className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
+    <section id="faq" className="px-5 py-24 sm:px-6">
       <div className="mx-auto max-w-3xl">
-        <div className="mb-20 text-center">
-          <span className="badge mb-6">FAQ</span>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
+        <div className="mb-16 text-center">
+          <span className="badge mb-4">FAQ</span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Frequently asked <span className="gradient-text">questions</span>
           </h2>
         </div>
-        <div className="space-y-6">
+        <div className="space-y-4">
           {faqs.map((faq) => (
             <details
               key={faq.q}
               className="group rounded-xl border border-border transition-colors hover:border-accent/30 [&_summary]:list-none"
             >
-              <summary className="flex cursor-pointer items-center justify-between p-7 font-medium">
+              <summary className="flex cursor-pointer items-center justify-between p-5 font-medium">
                 {faq.q}
                 <span className="ml-4 shrink-0 text-muted transition-transform group-open:rotate-180">
                   <IconArrowDown />
                 </span>
               </summary>
-              <div className="px-7 pb-7 text-sm leading-relaxed text-muted">
+              <div className="px-5 pb-5 text-sm leading-relaxed text-muted">
                 {faq.a}
               </div>
             </details>
@@ -582,14 +582,14 @@ function FAQSection() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border px-6 py-20 sm:px-8 lg:px-10">
+    <footer className="border-t border-border px-5 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="flex items-center gap-2">
             <span className="text-lg font-bold gradient-text">SupaFlutter Kit</span>
             <span>🐈‍⬛</span>
           </div>
-          <div className="flex items-center gap-8 text-sm text-muted">
+          <div className="flex items-center gap-6 text-sm text-muted">
             <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
               GitHub
             </a>
@@ -601,7 +601,7 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-10 text-xs text-muted/60 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-xs text-muted/60 sm:flex-row">
           <p>
             A <span className="font-semibold text-muted">RuriKit</span> product. Made with love by 琉璃 🐈‍⬛
           </p>

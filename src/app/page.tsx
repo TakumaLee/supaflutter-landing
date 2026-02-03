@@ -240,7 +240,7 @@ function Navbar() {
 
 function HeroSection() {
   return (
-    <section className="hero-gradient relative flex min-h-screen flex-col items-center justify-center px-5 pt-16 text-center sm:px-6">
+    <section className="hero-gradient relative flex min-h-screen flex-col items-center justify-center px-5 pt-24 text-center sm:px-6">
       <div className="animate-fade-in mx-auto max-w-4xl">
         <div className="badge mb-6">
           <span className="mr-1.5">🐈‍⬛</span> Built by Ruri — AI Maid Developer

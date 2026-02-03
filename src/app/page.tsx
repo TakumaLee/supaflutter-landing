@@ -296,7 +296,7 @@ function HeroSection() {
 
 function FeaturesGrid() {
   return (
-    <section id="features" className="px-4 py-24 sm:px-6 lg:px-8">
+    <section id="features" className="px-4 py-28 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <span className="badge mb-4">Features</span>
@@ -307,16 +307,16 @@ function FeaturesGrid() {
             Stop wasting weeks on boilerplate. SupaFlutter Kit gives you a production-grade foundation so you can focus on what makes your app unique.
           </p>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {features.map((f) => (
             <div
               key={f.title}
-              className="card-glow rounded-2xl border border-border p-6"
+              className="card-glow rounded-2xl border border-border p-6 flex flex-col gap-4"
             >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
                 {f.icon}
               </div>
-              <h3 className="mb-2 font-semibold">{f.title}</h3>
+              <h3 className="font-semibold">{f.title}</h3>
               <p className="text-sm leading-relaxed text-muted">{f.description}</p>
             </div>
           ))}
@@ -328,7 +328,7 @@ function FeaturesGrid() {
 
 function ArchitectureSection() {
   return (
-    <section id="architecture" className="px-4 py-24 sm:px-6">
+    <section id="architecture" className="px-4 py-28 sm:px-6">
       <div className="mx-auto max-w-4xl">
         <div className="mb-16 text-center">
           <span className="badge mb-4">Architecture</span>
@@ -339,17 +339,17 @@ function ArchitectureSection() {
             Built with separation of concerns in mind. Each layer has a clear responsibility, making your code testable, maintainable, and scalable.
           </p>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4">
           {archLayers.map((layer, i) => (
             <div
               key={layer.label}
-              className="group flex items-center gap-4 rounded-xl border border-border p-4 transition-all hover:border-accent/30 hover:bg-card"
+              className="group flex items-center gap-4 rounded-xl border border-border p-5 transition-all hover:border-accent/30 hover:bg-card"
               style={{ marginLeft: `${i * 24}px`, marginRight: `${(archLayers.length - 1 - i) * 24}px` }}
             >
               <div className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br ${layer.color} text-sm font-bold text-accent`}>
                 {i + 1}
               </div>
-              <div>
+              <div className="space-y-1">
                 <p className="font-semibold">{layer.label}</p>
                 <p className="text-sm text-muted">{layer.desc}</p>
               </div>
@@ -363,7 +363,7 @@ function ArchitectureSection() {
             </div>
           ))}
         </div>
-        <div className="mt-8 rounded-xl border border-border bg-card p-6 text-center">
+        <div className="mt-10 rounded-xl border border-border bg-card p-6 text-center">
           <p className="text-sm text-muted">
             <span className="font-mono text-accent">86 tests</span> passing — Clean architecture makes testing a breeze.
           </p>
@@ -375,19 +375,19 @@ function ArchitectureSection() {
 
 function TechStackSection() {
   return (
-    <section className="px-4 py-24 sm:px-6">
+    <section className="px-4 py-28 sm:px-6">
       <div className="mx-auto max-w-4xl">
-        <div className="mb-12 text-center">
+        <div className="mb-14 text-center">
           <span className="badge mb-4">Tech Stack</span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Powered by the <span className="gradient-text">best tools</span>
           </h2>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           {techStack.map((tech) => (
             <div
               key={tech.name}
-              className="card-glow flex items-center gap-2.5 rounded-full border border-border px-5 py-2.5"
+              className="card-glow flex items-center gap-2.5 rounded-full border border-border px-6 py-3"
             >
               <div
                 className="h-3 w-3 rounded-full"
@@ -404,7 +404,7 @@ function TechStackSection() {
 
 function PricingSection() {
   return (
-    <section id="pricing" className="px-4 py-24 sm:px-6 lg:px-8">
+    <section id="pricing" className="px-4 py-28 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <span className="badge mb-4">Pricing</span>
@@ -420,19 +420,19 @@ function PricingSection() {
           {/* Starter */}
           <div className="rounded-2xl border border-border p-6 sm:p-8 flex flex-col min-w-0">
             <h3 className="text-lg font-semibold">Starter</h3>
-            <p className="mt-1 text-sm text-muted">Everything to get started</p>
-            <div className="mt-6 flex items-baseline gap-2">
+            <p className="mt-2 text-sm text-muted">Everything to get started</p>
+            <div className="mt-8 flex items-baseline gap-2">
               <span className="text-4xl font-bold">$29</span>
             </div>
             <a
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 block w-full rounded-xl border border-border py-3 text-center font-semibold transition-colors hover:border-accent hover:bg-card"
+              className="mt-8 block w-full rounded-xl border border-border py-3 text-center font-semibold transition-colors hover:border-accent hover:bg-card"
             >
               Buy Starter
             </a>
-            <div className="mt-8 space-y-3 flex-1">
+            <div className="mt-10 space-y-3.5 flex-1">
               {pricingFeatures.map((f) => (
                 <div key={`starter-${f.name}`} className="flex items-center gap-3 text-sm">
                   {f.starter ? <IconCheck /> : <IconX />}
@@ -450,21 +450,21 @@ function PricingSection() {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-semibold">Pro</h3>
-                <p className="mt-1 text-sm text-muted">The complete toolkit</p>
+                <p className="mt-2 text-sm text-muted">The complete toolkit</p>
               </div>
             </div>
-            <div className="mt-6 flex items-baseline gap-2">
+            <div className="mt-8 flex items-baseline gap-2">
               <span className="text-4xl font-bold gradient-text">$59</span>
             </div>
             <a
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary mt-6 block w-full rounded-xl py-3 text-center font-semibold text-white"
+              className="btn-primary mt-8 block w-full rounded-xl py-3 text-center font-semibold text-white"
             >
               Buy Pro
             </a>
-            <div className="mt-8 space-y-3 flex-1">
+            <div className="mt-10 space-y-3.5 flex-1">
               {pricingFeatures.map((f) => (
                 <div key={`pro-${f.name}`} className="flex items-center gap-3 text-sm">
                   {f.pro ? <IconCheck /> : <IconX />}
@@ -477,19 +477,19 @@ function PricingSection() {
           {/* Team */}
           <div className="rounded-2xl border border-border p-6 sm:p-8 flex flex-col min-w-0">
             <h3 className="text-lg font-semibold">Team</h3>
-            <p className="mt-1 text-sm text-muted">For teams & agencies</p>
-            <div className="mt-6 flex items-baseline gap-2">
+            <p className="mt-2 text-sm text-muted">For teams & agencies</p>
+            <div className="mt-8 flex items-baseline gap-2">
               <span className="text-4xl font-bold">$129</span>
             </div>
             <a
               href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 block w-full rounded-xl border border-border py-3 text-center font-semibold transition-colors hover:border-accent hover:bg-card"
+              className="mt-8 block w-full rounded-xl border border-border py-3 text-center font-semibold transition-colors hover:border-accent hover:bg-card"
             >
               Buy Team
             </a>
-            <div className="mt-8 space-y-3 flex-1">
+            <div className="mt-10 space-y-3.5 flex-1">
               {pricingFeatures.map((f) => (
                 <div key={`team-${f.name}`} className="flex items-center gap-3 text-sm">
                   {f.team ? <IconCheck /> : <IconX />}
@@ -500,7 +500,7 @@ function PricingSection() {
           </div>
         </div>
 
-        <p className="mt-8 text-center text-sm text-muted/60">
+        <p className="mt-10 text-center text-sm text-muted/60">
           30-day money-back guarantee. No questions asked.
         </p>
       </div>
@@ -510,17 +510,17 @@ function PricingSection() {
 
 function SocialProofSection() {
   return (
-    <section className="px-4 py-24 sm:px-6">
+    <section className="px-4 py-28 sm:px-6">
       <div className="mx-auto max-w-4xl text-center">
-        <div className="rounded-2xl border border-border bg-card/50 px-6 py-16 backdrop-blur-sm">
-          <p className="mb-6 text-5xl">🐈‍⬛</p>
+        <div className="rounded-2xl border border-border bg-card/50 px-8 py-20 backdrop-blur-sm">
+          <p className="mb-8 text-5xl">🐈‍⬛</p>
           <h2 className="text-2xl font-bold sm:text-3xl">
             Built by <span className="gradient-text">AI</span>, trusted by developers.
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-muted">
+          <p className="mx-auto mt-6 max-w-lg text-muted">
             SupaFlutter Kit is maintained by Ruri (琉璃), an AI Maid Developer who obsesses over clean code, proper architecture, and developer experience.
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-8 text-muted">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-10 text-muted">
             <div className="text-center">
               <p className="text-2xl font-bold text-foreground">86</p>
               <p className="text-xs">Tests Passing</p>
@@ -549,7 +549,7 @@ function SocialProofSection() {
 
 function FAQSection() {
   return (
-    <section id="faq" className="px-4 py-24 sm:px-6">
+    <section id="faq" className="px-4 py-28 sm:px-6">
       <div className="mx-auto max-w-3xl">
         <div className="mb-16 text-center">
           <span className="badge mb-4">FAQ</span>
@@ -557,19 +557,19 @@ function FAQSection() {
             Frequently asked <span className="gradient-text">questions</span>
           </h2>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-5">
           {faqs.map((faq) => (
             <details
               key={faq.q}
               className="group rounded-xl border border-border transition-colors hover:border-accent/30 [&_summary]:list-none"
             >
-              <summary className="flex cursor-pointer items-center justify-between p-5 font-medium">
+              <summary className="flex cursor-pointer items-center justify-between p-6 font-medium">
                 {faq.q}
                 <span className="ml-4 shrink-0 text-muted transition-transform group-open:rotate-180">
                   <IconArrowDown />
                 </span>
               </summary>
-              <div className="px-5 pb-5 text-sm leading-relaxed text-muted">
+              <div className="px-6 pb-6 text-sm leading-relaxed text-muted">
                 {faq.a}
               </div>
             </details>
@@ -582,7 +582,7 @@ function FAQSection() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border px-4 py-12 sm:px-6 lg:px-8">
+    <footer className="border-t border-border px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="flex items-center gap-2">

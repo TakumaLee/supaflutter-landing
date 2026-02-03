@@ -213,7 +213,7 @@ const faqs = [
 function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#" className="flex items-center gap-2 text-lg font-bold">
           <span className="gradient-text">SupaFlutter Kit</span>
           <span className="text-sm">🐈‍⬛</span>
@@ -296,8 +296,8 @@ function HeroSection() {
 
 function FeaturesGrid() {
   return (
-    <section id="features" className="px-4 py-24 sm:px-6">
-      <div className="mx-auto max-w-6xl">
+    <section id="features" className="px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <span className="badge mb-4">Features</span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
@@ -307,7 +307,7 @@ function FeaturesGrid() {
             Stop wasting weeks on boilerplate. SupaFlutter Kit gives you a production-grade foundation so you can focus on what makes your app unique.
           </p>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {features.map((f) => (
             <div
               key={f.title}
@@ -404,8 +404,8 @@ function TechStackSection() {
 
 function PricingSection() {
   return (
-    <section id="pricing" className="px-4 py-24 sm:px-6">
-      <div className="mx-auto max-w-6xl">
+    <section id="pricing" className="px-4 py-24 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <span className="badge mb-4">Pricing</span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
@@ -416,9 +416,9 @@ function PricingSection() {
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-1 max-w-5xl mx-auto">
+        <div className="grid gap-6 lg:grid-cols-3 lg:gap-8 max-w-6xl mx-auto">
           {/* Starter */}
-          <div className="rounded-2xl border border-border p-6 sm:p-8 flex flex-col">
+          <div className="rounded-2xl border border-border p-6 sm:p-8 flex flex-col min-w-0">
             <h3 className="text-lg font-semibold">Starter</h3>
             <p className="mt-1 text-sm text-muted">Everything to get started</p>
             <div className="mt-6 flex items-baseline gap-2">
@@ -443,7 +443,7 @@ function PricingSection() {
           </div>
 
           {/* Pro — Recommended */}
-          <div className="pricing-popular rounded-2xl border border-accent/50 p-6 sm:p-8 flex flex-col relative">
+          <div className="pricing-popular rounded-2xl border border-accent/50 p-6 sm:p-8 flex flex-col relative min-w-0">
             <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
               <span className="badge text-xs font-semibold">⭐ Recommended</span>
             </div>
@@ -475,7 +475,7 @@ function PricingSection() {
           </div>
 
           {/* Team */}
-          <div className="rounded-2xl border border-border p-6 sm:p-8 flex flex-col">
+          <div className="rounded-2xl border border-border p-6 sm:p-8 flex flex-col min-w-0">
             <h3 className="text-lg font-semibold">Team</h3>
             <p className="mt-1 text-sm text-muted">For teams & agencies</p>
             <div className="mt-6 flex items-baseline gap-2">
@@ -582,8 +582,8 @@ function FAQSection() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border px-4 py-12 sm:px-6">
-      <div className="mx-auto max-w-6xl">
+    <footer className="border-t border-border px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="flex items-center gap-2">
             <span className="text-lg font-bold gradient-text">SupaFlutter Kit</span>

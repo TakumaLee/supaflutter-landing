@@ -213,7 +213,7 @@ const faqs = [
 function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-10">
         <a href="#" className="flex items-center gap-2 text-lg font-bold">
           <span className="gradient-text">SupaFlutter Kit</span>
           <span className="text-sm">🐈‍⬛</span>
@@ -240,7 +240,7 @@ function Navbar() {
 
 function HeroSection() {
   return (
-    <section className="hero-gradient relative flex min-h-screen flex-col items-center justify-center px-4 pt-16 text-center">
+    <section className="hero-gradient relative flex min-h-screen flex-col items-center justify-center px-6 pt-16 text-center sm:px-8">
       <div className="animate-fade-in mx-auto max-w-4xl">
         <div className="badge mb-6">
           <span className="mr-1.5">🐈‍⬛</span> Built by Ruri — AI Maid Developer
@@ -296,7 +296,7 @@ function HeroSection() {
 
 function FeaturesGrid() {
   return (
-    <section id="features" className="px-4 py-32 sm:px-6 lg:px-8 lg:py-40">
+    <section id="features" className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-7xl">
         <div className="mb-20 text-center">
           <span className="badge mb-6">Features</span>
@@ -328,7 +328,7 @@ function FeaturesGrid() {
 
 function ArchitectureSection() {
   return (
-    <section id="architecture" className="px-4 py-32 sm:px-6 lg:py-40">
+    <section id="architecture" className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-4xl">
         <div className="mb-20 text-center">
           <span className="badge mb-6">Architecture</span>
@@ -375,7 +375,7 @@ function ArchitectureSection() {
 
 function TechStackSection() {
   return (
-    <section className="px-4 py-32 sm:px-6 lg:py-40">
+    <section className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-4xl">
         <div className="mb-16 text-center">
           <span className="badge mb-6">Tech Stack</span>
@@ -404,7 +404,7 @@ function TechStackSection() {
 
 function PricingSection() {
   return (
-    <section id="pricing" className="px-4 py-32 sm:px-6 lg:px-8 lg:py-40">
+    <section id="pricing" className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-7xl">
         <div className="mb-20 text-center">
           <span className="badge mb-6">Pricing</span>
@@ -510,9 +510,9 @@ function PricingSection() {
 
 function SocialProofSection() {
   return (
-    <section className="px-4 py-32 sm:px-6 lg:py-40">
+    <section className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-4xl text-center">
-        <div className="rounded-2xl border border-border bg-card/50 px-10 py-24 backdrop-blur-sm">
+        <div className="rounded-2xl border border-border bg-card/50 px-8 py-24 sm:px-10 backdrop-blur-sm">
           <p className="mb-10 text-6xl">🐈‍⬛</p>
           <h2 className="text-2xl font-bold sm:text-3xl">
             Built by <span className="gradient-text">AI</span>, trusted by developers.
@@ -549,7 +549,7 @@ function SocialProofSection() {
 
 function FAQSection() {
   return (
-    <section id="faq" className="px-4 py-32 sm:px-6 lg:py-40">
+    <section id="faq" className="px-6 py-32 sm:px-8 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-3xl">
         <div className="mb-20 text-center">
           <span className="badge mb-6">FAQ</span>
@@ -582,7 +582,7 @@ function FAQSection() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border px-4 py-20 sm:px-6 lg:px-8">
+    <footer className="border-t border-border px-6 py-20 sm:px-8 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
           <div className="flex items-center gap-2">
